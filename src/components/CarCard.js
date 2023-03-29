@@ -9,7 +9,6 @@ return (
   <br></br>
   <div className="bg-box">
   <h1 className="car-title">{make} {model}</h1>
-                {/* <h3 className="car-subtitle">{model}</h3> */}
                 <div className="typebox">
                     <small className="specs"><b>Year:</b> {year}</small>
                     <br></br>
