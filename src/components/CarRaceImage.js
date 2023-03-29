@@ -11,6 +11,15 @@ function CarRaceImage({ race, setRace, handleDeleteCar, show }) {
         setRace(data);
       });
   }, []);
+  
+  useEffect(() => {
+    fetch(`/races_cars`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        setRacesCars(data);
+      });
+  }, [handleDeleteCar]);
+
 
 }
 
