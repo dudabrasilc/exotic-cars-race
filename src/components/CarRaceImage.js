@@ -11,7 +11,7 @@ function CarRaceImage({ race, setRace, handleDeleteCar, show }) {
         setRace(data);
       });
   }, []);
-  
+
   useEffect(() => {
     fetch(`/races_cars`)
       .then((resp) => resp.json())
@@ -20,6 +20,31 @@ function CarRaceImage({ race, setRace, handleDeleteCar, show }) {
       });
   }, [handleDeleteCar]);
 
+  const carImages =
+    race.cars &&
+    racesCars
+      .filter((racesCar) => racesCar.race_id === race.id)
+      .map((racesCar) => {
+        return (
+          <div className="imgdiv" key={racesCar.id}>
+           <i
+              className={show ? "show fa-solid fa-xmark fa-xl" : "hide"}
+              onClick={() => {
+                handleDeleteCar(racesCar.car.id)
+              }}
+            ></i>
+            <Link to={`/${racesCar.car.id}/details`}>
+              <img
+                className="car-race-img"
+                src={racesCar.car.image}
+                alt="car-image"
+              />
+            </Link>
+          </div>
+        );
+      });
+
+  return <>{carImages}</>;
 
 }
 
