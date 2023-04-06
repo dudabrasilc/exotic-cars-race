@@ -105,9 +105,10 @@ function RaceCard({ deleteRace, deleteCar, raceId, updateFavorite }) {
 
   function handleClick() {
 
-  setShowResult(true)
+
 
   if (race.cars.length >= 2) { // Check if there are at least 2 cars in the race
+    setShowResult(true)
     const trackLength = parseFloat(race?.race_track?.length); // Get the length of the race track and convert it to a float
     const trackTurns = parseInt(race?.race_track?.turns); // Get the number of turns in the race track and convert it to an integer
     const trackVerticalGain = parseInt(race?.race_track?.vertical_gain); // Get the vertical gain of the race track and convert it to an integer
@@ -170,7 +171,15 @@ function RaceCard({ deleteRace, deleteCar, raceId, updateFavorite }) {
           <br></br>
           <button className="racebutton" onClick={handleClick} >LET'S RACE!  🏁</button>
           {/* <hr></hr> */}
-          {/* <h1 className="result-title">{showResult ? "Race Result" : null}</h1> */}
+          {
+            showResult ?
+            <>
+              <hr></hr>
+              <h1 className="result-title">Result</h1>
+            </>
+              :
+              null
+          }
           {result}
           <div className="error-minimum">{hasMinimumCars ? null : "Error: A race must have at least 2 cars."}</div>   
       </div>
