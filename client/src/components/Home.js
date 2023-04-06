@@ -15,7 +15,7 @@ function Home({ user }) {
           <div className="logged-in-home">
             <img src={exotic} alt="exotic-cars-logo" className="exotic-cars-logo" />
             <br></br>
-            <h2 className="home_title">Welcome Back, {user.username}!</h2>
+            <h2 className="home_title">Welcome Back, {user.username.charAt(0).toUpperCase() + user.username.slice(1)}!</h2>
           </div>
         </div>
       </div>

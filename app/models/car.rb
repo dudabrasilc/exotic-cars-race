@@ -10,10 +10,10 @@ class Car < ApplicationRecord
   validates :year, presence: true
   validates :engine, presence: true
   validates :power, presence: true
-  validates :zero_to_sixty_mph, presence: true, numericality: { only_integer: true }
+  validates :zero_to_sixty_mph, presence: true, numericality: true
   validates :torque, presence: true
-  validates :top_speed, presence: true, numericality: { only_integer: true }
+  validates :top_speed, presence: true, numericality: true
   validates :image, presence: true, uniqueness: true, format: { with: URI.regexp }
-  validates :weight, presence: true, numericality: { only_integer: true }
+  validates :weight, presence: true, numericality: true
 
 end

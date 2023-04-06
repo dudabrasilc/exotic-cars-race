@@ -175,7 +175,7 @@ function RaceCard({ deleteRace, deleteCar, raceId, updateFavorite }) {
             showResult ?
             <>
               <hr></hr>
-              <h1 className="result-title">Result</h1>
+              <h1 className="result-title">Race Results</h1>
             </>
               :
               null

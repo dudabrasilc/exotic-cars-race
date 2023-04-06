@@ -10,6 +10,7 @@
 .results {
   margin-left: 30px;
   margin-top: 40px;
+  color: #160038;
 }
 
 .track-description {
@@ -18,13 +19,6 @@
   text-align: center;
   margin-left: 60px;
   margin-right: 60px;
-}
-
-.add-car {
-  /* float: right; */
-  /* padding-left: 750px; */
-  /* margin-left: -500px; */
-  /* padding-right: 1000px; */
 }
 
 .card-location {
@@ -45,6 +39,8 @@
   .result-title {
     text-align: center;
     font-size: 50px;
+    color:#160038;
+    text-shadow: 1px 1px white;
   }
 
   .error-minimum { 
@@ -139,8 +135,6 @@ text-shadow: 1px 1px #191a1b, 1px 1px #1b1919;
 }
 
 .exotic-cars-logo {
-    /* padding-left: 25%; */
-
     position: absolute;
     top: 50%;
     left: 30%;
@@ -150,7 +144,6 @@ text-shadow: 1px 1px #191a1b, 1px 1px #1b1919;
 .car-added {
   font-style: italic;
   margin-top: 250px;
-  /* margin-left: 1000px; */
 }
 
 .dropdown-search {
@@ -673,8 +666,11 @@ margin-left: -140px;
 /* CAR COLLECTION PAGE */
 
 .bg-collection {
-  position: relative; /* add relative positioning */
+  position: relative;
   background-color: #290465;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .bg-collection::after {
@@ -692,6 +688,7 @@ margin-left: -140px;
   padding-top: 90px;
   display: grid;
   margin: 0 auto;
+  margin-left: 80px;
   grid-template-columns: auto auto auto;
   gap: 4% 5%;
   padding-right: 2%;
